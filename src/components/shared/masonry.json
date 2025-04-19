@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_masonries",
+  "info": {
+    "displayName": "Masonry",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "files",
+        "videos",
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

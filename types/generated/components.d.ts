@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedMasonry extends Struct.ComponentSchema {
+  collectionName: 'components_shared_masonries';
+  info: {
+    displayName: 'Masonry';
+    icon: 'landscape';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<'files' | 'videos' | 'images', true>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +76,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.masonry': SharedMasonry;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
